@@ -41,7 +41,7 @@ jobs:
     - name: Configure and Build Qt
       shell: cmd
       run: |
-        cd C:\Qt\6.10.0
+        cd /D C:\Qt\6.10.0
         mkdir qt_build
         cd qt_build
         "C:\Qt\6.10.0\src\configure.bat" -prefix "C:\Qt\6.10.0\msvc2022_64" -skip qtgraphs -skip qtquicktimeline -skip qtquick3d -skip qt3d -skip qtactiveqt -skip qtdatavis3d -skip qthttpserver -skip qtmqtt -skip qtnetworkauth -skip qtopcua -skip qtquick3dphysics -skip qtquickeffectmaker -skip qtremoteobjects -skip qtscxml -skip qtsensors -skip qtserialbus -skip qtspeech -skip qtwayland -skip qtdoc -skip qtwebview -skip qtvirtualkeyboard -skip qtwebengine -skip qtgrpc -skip qtwebchannel -opensource -opengl desktop -confirm-license -platform win32-msvc -release -openssl-linked -- -Wno-dev "-DOPENSSL_ROOT_DIR=C:\Program Files\OpenSSL" "-DOPENSSL_INCLUDE_DIR=C:\Program Files\OpenSSL\include" -DOPENSSL_USE_STATIC_LIBS=ON  -DQT_BUILD_EXAMPLES=OFF  -DQT_BUILD_TESTS=OFF      
