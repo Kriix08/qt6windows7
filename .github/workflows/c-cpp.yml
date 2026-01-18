@@ -31,8 +31,9 @@ jobs:
         git clone --branch 6.10.0 --recursive https://github.com/qt/qtbase.git C:\Qt\6.10.0
 
     - name: Apply Patches
+      shell: bash
       run: |
-        xcopy /E /Y %cd%\src\* C:\Qt\6.10.0\src\
+        cp -Rfv "$PWD\src\"* "C:\Qt\6.10.0\src\"
 
     - name: Configure and Build Qt
       run: |
