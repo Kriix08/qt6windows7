@@ -27,8 +27,8 @@ runs:
 
     - name: Set Qt6_DIR and update PATH
       run: |
-        echo "QT6_DIR=$(pwd)/Qt_${{ inputs.version }}" >> $GITHUB_ENV
-        echo "$(pwd)/Qt_${{ inputs.version }}/bin" >> $GITHUB_PATH
+        echo "QT6_DIR=${{ github.workspace }}\\Qt_${{ inputs.version }}" >> $GITHUB_ENV
+        echo "${{ github.workspace }}\\Qt_${{ inputs.version }}/bin" >> $GITHUB_PATH
         echo "QT6_DIR set to $QT6_DIR"
         echo "PATH updated to include $QT6_DIR/bin"
       shell: bash
