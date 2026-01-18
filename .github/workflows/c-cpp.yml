@@ -28,7 +28,7 @@ jobs:
 
     - name: Clone Qt Source from GitHub Mirror
       run: |
-        git clone --branch 6.10.0 --recursive https://github.com/qt/qtbase.git C:\Qt\6.10.0
+        git clone --branch 6.10.0 --single-branch --depth 1 --recurse-submodules https://github.com/qt/qt5.git C:\Qt\6.10.0
 
     - name: Apply Patches
       shell: bash
